@@ -11,14 +11,14 @@
       <div class="p-1 mx-3">
         <a
           href="#"
-          class="hover:underline text-[19px] font-josefin text-slate-50 text-lg m-4 hover:text-yellow-100"
+          class="invisible md:visible hover:underline text-[19px] font-josefin text-slate-50 text-lg m-4 hover:text-yellow-100"
         >
           About</a
         >
 
         <a
           href="#"
-          class="hover:underline text-[19px] font-josefin text-slate-50 text-lg hover:text-yellow-100"
+          class="invisible md:visible hover:underline text-[19px] font-josefin text-slate-50 text-lg hover:text-yellow-100"
           >Contact</a
         >
       </div>
