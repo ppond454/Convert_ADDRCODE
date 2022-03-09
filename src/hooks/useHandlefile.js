@@ -1,8 +1,10 @@
 import { ref } from "vue"
 import axios from "axios"
+import { useToast } from "vue-toastification"
 
 import useModal from "./useModal"
 
+const toast = useToast()
 const { toggleModal } = useModal()
 let file = ref(null)
 let nameFile = ref(null)
@@ -18,7 +20,7 @@ const Handlefile = () => {
 
   const selectFile = (e) => {
     console.log(e)
-    
+
     if (e.target.files.length === 0) return
 
     let typeFile = isCSV(e.target.files[0].name)
@@ -37,11 +39,27 @@ const Handlefile = () => {
     nameFile.value = null
   }
 
+  const showToast = () => {
+    toast.success("Started Downloading file", {
+      position: "top-left",
+      timeout: 5000,
+      closeOnClick: true,
+      pauseOnFocusLoss: true,
+      pauseOnHover: true,
+      draggable: true,
+      draggablePercent: 0.6,
+      showCloseButtonOnHover: false,
+      hideProgressBar: true,
+      closeButton: "button",
+      icon: true,
+      rtl: false,
+    })
+  }
   const handleFileDownload = async () => {
-    isLoading.value= true
+    isLoading.value = true
     if (isUploaded !== null) {
       try {
-        const res =await axios.get(
+        const res = await axios.get(
           `http://127.0.0.1:4000/download/${isUploaded.value}`,
           {
             responseType: "blob",
@@ -58,15 +76,16 @@ const Handlefile = () => {
         clearData()
         isUploaded.value = null
         isLoading.value = false
+        showToast()
       } catch (e) {
-          throw new Error
-          isLoading.value=false
+        throw new Error()
+        isLoading.value = false
       }
     }
   }
 
   const handleFileUpload = async () => {
-    isLoading.value= true
+    isLoading.value = true
     const formData = new FormData()
     formData.append("file", file.value)
     console.log("select file", formData)
@@ -81,11 +100,11 @@ const Handlefile = () => {
 
       if (res.status === 201) {
         isUploaded.value = data.id
-        isLoading.value= false
+        isLoading.value = false
       }
     } catch (e) {
       throw new Error(e)
-      isLoading.value= false
+      isLoading.value = false
     }
   }
 

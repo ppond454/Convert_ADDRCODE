@@ -33,7 +33,7 @@
           <span class="block w-6 h-[2px] bg-stone-100 animate-pulse"></span>
         </div>
       </button>
-      <button class="text-yellow-900 text-md hidden md:flex">
+      <!-- <button class="text-yellow-900 text-md hidden md:flex">
         <label
           for="toggle-example"
           class="flex relative items-center mb-4 cursor-pointer"
@@ -47,7 +47,7 @@
             >Cocho mint</span
           >
         </label>
-      </button>
+      </button> -->
     </div>
   </nav>
 </template>

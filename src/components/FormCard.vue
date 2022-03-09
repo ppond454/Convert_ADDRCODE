@@ -115,13 +115,10 @@
 </template>
 
 <script>
-import { computed } from "vue"
 import useHandlefile from "../hooks/useHandlefile"
-import useModal from "../hooks/useModal"
 export default {
   name: "form-card",
   setup() {
-    const { toggleModal } = useModal()
     const {
       selectFile,
       handleFileUpload,
