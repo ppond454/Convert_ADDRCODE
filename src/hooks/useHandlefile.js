@@ -60,7 +60,7 @@ const Handlefile = () => {
     if (isUploaded !== null) {
       try {
         const res = await axios.get(
-          `http://127.0.0.1:4000/download/${isUploaded.value}`,
+          `${process.env.VUE_APP_API_ADDRESS}/download/${isUploaded.value}`,
           {
             responseType: "blob",
           }
@@ -91,7 +91,7 @@ const Handlefile = () => {
     console.log("select file", formData)
 
     try {
-      const res = await axios.post("http://127.0.0.1:4000/upload", formData, {
+      const res = await axios.post("${process.env.VUE_APP_API_ADDRESS}/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
