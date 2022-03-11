@@ -54,13 +54,14 @@ const Handlefile = () => {
       icon: true,
       rtl: false,
     })
-  }
+  } 
+
   const handleFileDownload = async () => {
     isLoading.value = true
     if (isUploaded !== null) {
       try {
         const res = await axios.get(
-          `${process.env.VUE_APP_API_ADDRESS}/download/${isUploaded.value}`,
+          `${import.meta.env.VITE_API_ENDPOINT}/download/${isUploaded.value}`,
           {
             responseType: "blob",
           }
@@ -84,6 +85,7 @@ const Handlefile = () => {
     }
   }
 
+
   const handleFileUpload = async () => {
     isLoading.value = true
     const formData = new FormData()
@@ -91,7 +93,7 @@ const Handlefile = () => {
     console.log("select file", formData)
 
     try {
-      const res = await axios.post("${process.env.VUE_APP_API_ADDRESS}/upload", formData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_ENDPOINT}/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
