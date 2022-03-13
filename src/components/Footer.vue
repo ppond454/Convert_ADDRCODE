@@ -13,7 +13,7 @@
       <div class="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
         <a
           rel="noopener noreferrer"
-          href="#"
+          href="mailto: 5835512107@psu.ac.th"
           title="Email"
           class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-coolGray-900"
         >
@@ -33,9 +33,10 @@
         </a>
 
         <a
+          target="_blank"
           rel="noopener noreferrer"
-          href="#"
-          title="Twitter"
+          href="https://www.facebook.com/ppond454/"
+          title="facebook"
           class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-coolGray-900"
         >
           <img
@@ -43,8 +44,9 @@
           />
         </a>
         <a
+          target="_blank"
           rel="noopener noreferrer"
-          href="#"
+          href="https://github.com/ppond454"
           title="GitHub"
           class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-coolGray-900"
         >

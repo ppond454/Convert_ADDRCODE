@@ -1,26 +1,12 @@
 <template lang="">
   <nav
-    class="flex opacity-90  items-center sticky top-0 z-50 pl-[10px] md:px-auto shadow-xl h-16 bg-teal-500 justify-between sm:justify-around space-x-10"
+    class="flex opacity-90 items-center sticky top-0 z-50 pl-[10px] md:px-auto shadow-xl h-16 bg-teal-500 dark:bg-red-200 justify-between sm:justify-around space-x-10"
   >
     <div class="flex">
       <div>
         <a href="#" class="font-pacifico text-slate-50 text-xl md:text-2xl">
           CAC Website
         </a>
-      </div>
-      <div class="p-1 mx-3">
-        <a
-          href="#"
-          class="invisible md:visible hover:underline text-[19px] font-josefin text-slate-50 text-lg m-4 hover:text-yellow-100"
-        >
-          About</a
-        >
-
-        <a
-          href="#"
-          class="invisible md:visible hover:underline text-[19px] font-josefin text-slate-50 text-lg hover:text-yellow-100"
-          >Contact</a
-        >
       </div>
     </div>
     <div class="">
@@ -33,25 +19,65 @@
           <span class="block w-6 h-[2px] bg-stone-100 animate-pulse"></span>
         </div>
       </button>
-      <!-- <button class="text-yellow-900 text-md hidden md:flex">
-        <label
-          for="toggle-example"
-          class="flex relative items-center mb-4 cursor-pointer"
+
+      <transition name="toggle">
+        <button
+          v-if="sw === 'Cocho-mint'"
+          @click.prevent="onTheme"
+          class="text-yellow-900 font-josefin text-md hidden md:flex w-[100px]"
         >
-          <input type="checkbox" id="toggle-example" class="sr-only" />
-          <div
-            class="w-11 h-6 bg-gray-200 rounded-full border border-gray-200 toggle-bg dark:bg-gray-700 dark:border-gray-600"
-          ></div>
-          <span
-            class="ml-3 text-sm font-josefin font-medium text-gray-900 dark:text-gray-300"
-            >Cocho mint</span
-          >
-        </label>
-      </button> -->
+          <div class="relative justify-center inline-flex">
+            <img
+              src="src/assets/thememint.png"
+              alt="toggle"
+              class="w-[60px] h-[60px]"
+            />
+            <label class="ml-[1px] mt-[10px] text-[14px]">Cocho Mint</label>
+          </div>
+        </button>
+        <button
+          v-else-if="sw === 'Yogurt'"
+          @click.prevent="onTheme"
+          class="relative text-yellow-900 font-josefin text-md hidden md:flex w-[100px]"
+        >
+          <div class="justify-center inline-flex">
+            <img
+              src="src/assets/themeyogurt.png"
+              alt="toggle"
+              class="w-[60px] h-[60px]"
+            />
+            <label class="ml-[1px] mt-[20px] text-[14px]">Yogurt</label>
+          </div>
+        </button>
+      </transition>
     </div>
   </nav>
 </template>
 <script>
-export default {  name: "nav-bar",
+import useTheme from "../hooks/useTheme"
+export default {
+  name: "nav-bar",
+  setup() {
+    const { onTheme, sw } = useTheme()
+
+    return {
+      onTheme,
+      sw,
+    }
+  },
 }
 </script>
+<style scoped>
+.toggle-enter-from {
+  opacity: 1;
+  transform: translateY(-2rem);
+}
+.toggle-enter-to {
+  opacity: 1;
+  transform: translateY(0rem);
+}
+.toggle-enter-active {
+  transition: all 0.3s ease-out;
+}
+</style>
+>

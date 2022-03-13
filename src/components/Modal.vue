@@ -53,13 +53,12 @@
 </template>
 
 <script>
-import {ref} from "vue"
 import useModal from "../hooks/useModal.js"
 
 
 export default {
   name: "modal",
-  setup(props) {
+  setup() {
     const { toggleModal,showModal} = useModal()
     return {
       showModal,
