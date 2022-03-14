@@ -10,21 +10,11 @@
       </div>
     </div>
     <div class="">
-      <button class="md:hidden">
-        <div
-          class="hover:bg-blue-400 border-solid border-2 p-2 border-sky-200 space-y-2 bg-sky-600 rounded shadow-lg"
-        >
-          <span class="block w-6 h-[2px] bg-stone-100 animate-pulse"></span>
-          <span class="block w-6 h-[2px] bg-stone-100 animate-pulse"></span>
-          <span class="block w-6 h-[2px] bg-stone-100 animate-pulse"></span>
-        </div>
-      </button>
-
       <transition name="toggle">
         <button
           v-if="sw === 'Cocho-mint'"
           @click.prevent="onTheme"
-          class="text-yellow-900 font-josefin text-md hidden md:flex w-[100px]"
+          class="text-yellow-900 font-josefin text-md  md:flex mr-2 w-[100px]"
         >
           <div class="relative justify-center inline-flex">
             <img
@@ -38,7 +28,7 @@
         <button
           v-else-if="sw === 'Yogurt'"
           @click.prevent="onTheme"
-          class="relative text-yellow-900 font-josefin text-md hidden md:flex w-[100px]"
+          class="relative text-yellow-900 font-josefin text-md  mr-2 md:flex w-[100px]"
         >
           <div class="justify-center inline-flex">
             <img
