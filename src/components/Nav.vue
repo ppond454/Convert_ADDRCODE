@@ -28,7 +28,7 @@
         >
           <div class="relative justify-center inline-flex">
             <img
-              src="src/assets/thememint.png"
+              src="../assets/thememint.png"
               alt="toggle"
               class="w-[60px] h-[60px]"
             />
@@ -42,7 +42,7 @@
         >
           <div class="justify-center inline-flex">
             <img
-              src="src/assets/themeyogurt.png"
+              src="../assets/themeyogurt.png"
               alt="toggle"
               class="w-[60px] h-[60px]"
             />
