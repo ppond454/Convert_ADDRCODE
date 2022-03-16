@@ -1,7 +1,7 @@
 <template lang="">
   <div
     style="backdrop-filter: blur(20px)"
-    class="bg-opacity-80 bg-clip-padding bg-green-100 mx-[10px] my-[50px] block justify-center flex-col shadow-2xl md:w-[700px] md:h-[500px] rounded-2xl"
+    class="bg-opacity-80 bg-clip-padding dark:bg-white bg-green-100 mx-[10px] my-[50px] block justify-center flex-col shadow-2xl md:w-[700px] md:h-[500px] rounded-2xl"
   >
     <div class="flex justify-center">
       <h1
@@ -14,7 +14,7 @@
     <div class="m-4">
       <div class="flex items-center justify-center w-full">
         <label
-          class="flex flex-col h-32 border-4 border-[#CD9865] border-dashed hover:bg-yellow-100 hover:border-[#836c5f]"
+          class="flex flex-col h-32 border-4 border-[#CD9865] border-dashed hover:bg-yellow-100 dark:hover:bg-red-100 hover:border-[#836c5f]"
         >
           <div class="flex flex-col items-center justify-center pt-7">
             <svg
@@ -53,7 +53,7 @@
         v-if="isUploaded !== null"
         :disabled="nameFile === null"
         @click.prevent="handleFileDownload"
-        class="mx-2 w-[150px] px-4 py-2 text-white bg-purple-600 hover:bg-purple-500 rounded shadow-xl"
+        class="mx-2 w-[150px] px-4 py-2 text-white dark:hover:bg-green-300 dark:bg-green-500 bg-purple-600 hover:bg-purple-500 rounded shadow-xl"
         :class="{ [`cursor-not-allowed`]: nameFile === null }"
       >
         <p v-if="!isLoading">Download here</p>
@@ -80,7 +80,7 @@
         v-if="isUploaded === null"
         :disabled="nameFile === null"
         @click.prevent="handleFileUpload"
-        class="mx-2 w-[150px] px-4 py-2 text-white bg-purple-600 hover:bg-purple-500 rounded shadow-xl"
+        class="mx-2 w-[150px] px-4 py-2 text-white dark:hover:bg-green-300 dark:bg-green-500 bg-purple-600 hover:bg-purple-500 rounded shadow-xl"
         :class="{ [`cursor-not-allowed`]: nameFile === null }"
       >
         <p v-if="!isLoading">Convert</p>

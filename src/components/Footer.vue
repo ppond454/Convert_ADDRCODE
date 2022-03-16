@@ -15,7 +15,7 @@
           rel="noopener noreferrer"
           href="mailto: 5835512107@psu.ac.th"
           title="Email"
-          class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-coolGray-900"
+          class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-red-200 dark:text-coolGray-900"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@
           rel="noopener noreferrer"
           href="https://www.facebook.com/ppond454/"
           title="facebook"
-          class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-coolGray-900"
+          class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-red-200 dark:text-coolGray-900"
         >
           <img
             src="https://img.icons8.com/ios-filled/20/000000/facebook--v2.png"
@@ -48,7 +48,7 @@
           rel="noopener noreferrer"
           href="https://github.com/ppond454"
           title="GitHub"
-          class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-violet-400 dark:text-coolGray-900"
+          class="flex items-center justify-center w-10 h-10 rounded-full dark:bg-red-200 dark:text-coolGray-900"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

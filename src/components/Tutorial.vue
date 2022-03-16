@@ -1,6 +1,6 @@
 <template lang="">
   <div
-    class="bg-opacity-80 bg-clip-padding bg-green-100 mx-[10px] my-[50px] block justify-center flex-col shadow-2xl md:w-[700px] md:h-[500px] rounded-2xl"
+    class="bg-opacity-80 bg-clip-padding dark:bg-white bg-green-100 mx-[10px] my-[50px] block justify-center flex-col shadow-2xl md:w-[700px] md:h-[500px] rounded-2xl"
   >
     <div class="flex justify-center">
       <h1

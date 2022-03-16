@@ -1,6 +1,6 @@
 <template lang="">
   <nav
-    class="flex opacity-90 items-center sticky top-0 z-50 pl-[10px] md:px-auto shadow-xl h-16 bg-teal-500 dark:bg-red-200 justify-between sm:justify-around space-x-10"
+    class="flex opacity-90 items-center sticky top-0 z-50 pl-[10px] md:px-auto shadow-xl h-16 bg-teal-500 dark:bg-red-300 justify-between sm:justify-around space-x-10"
   >
     <div class="flex">
       <div>
