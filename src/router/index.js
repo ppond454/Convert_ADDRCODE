@@ -17,10 +17,10 @@ const router = createRouter({
   routes,
 })
 
-// router.beforeEach((to,from,next)=>{
-//     document.title = `CaC | ${to.meta.title}`
-//     // document.querySelector("[rel='icon']").setAttribute('href',to.meta.icon)
-//     next()
-// })
+router.beforeEach((to,from,next)=>{
+    document.title = `CaC | ${to.meta.title}`
+    // document.querySelector("[rel='icon']").setAttribute('href',to.meta.icon)
+    next()
+})
 
 export default router
