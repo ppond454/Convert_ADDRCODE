@@ -14,12 +14,12 @@ let isLoading = ref(false)
 const Handlefile = () => {
   const isCSV = (filename) => {
     let fileExtension = filename.replace(/^.*\./, "")
-    console.log(fileExtension)
+    // console.log(fileExtension)
     return fileExtension
   }
 
   const selectFile = (e) => {
-    console.log(e)
+    // console.log(e)
 
     if (e.target.files.length === 0) return
 
@@ -27,7 +27,7 @@ const Handlefile = () => {
     if (typeFile === "csv" || typeFile === "CSV") {
       file.value = e.target.files[0]
       nameFile.value = e.target.files[0].name
-      console.log(nameFile.value)
+      // console.log(nameFile.value)
     } else {
       file.value = null
       nameFile.value = null
@@ -79,20 +79,21 @@ const Handlefile = () => {
         isLoading.value = false
         showToast()
       } catch (e) {
-        throw new Error()
         isLoading.value = false
+        throw new Error()
+        
       }
     }
   }
 
 
   const handleFileUpload = async () => {
-    isLoading.value = true
-    const formData = new FormData()
-    formData.append("file", file.value)
-    console.log("select file", formData)
-
     try {
+      isLoading.value = true
+      const formData = new FormData()
+      formData.append("file", file.value)
+      // console.log("select file", formData)
+  
       const res = await axios.post(`${import.meta.env.VITE_API_ENDPOINT}/upload`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
@@ -104,9 +105,28 @@ const Handlefile = () => {
         isUploaded.value = data.id
         isLoading.value = false
       }
+
+      
     } catch (e) {
-      throw new Error(e)
+  
+      toast.error(e.response.data.message, {
+        position: "top-left",
+        timeout: 5000,
+        closeOnClick: true,
+        pauseOnFocusLoss: true,
+        pauseOnHover: true,
+        draggable: true,
+        draggablePercent: 0.6,
+        showCloseButtonOnHover: false,
+        hideProgressBar: true,
+        closeButton: "button",
+        icon: true,
+        rtl: false,
+      })
       isLoading.value = false
+      clearData()
+      isUploaded.value = null
+      throw new Error(e)
     }
   }
 
