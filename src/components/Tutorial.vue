@@ -9,17 +9,17 @@
         Watching the Guideline
       </h1>
     </div>
-    <div class="mx-[40px] my-[10px]">
+    <div class="flex justify-center">
       <iframe
         width="560"
         height="315"
+        class="center"
         src="https://www.youtube-nocookie.com/embed/9VNM3DJElrw?cc_load_policy=1&cc_lang_pref=en"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
-  
-      ></iframe>
+      />
     </div>
   </div>
 </template>
