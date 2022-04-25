@@ -6,22 +6,26 @@
       <h1
         class="mt-[20px] mx-[10px] md:text-[42px] text-[32px] font-extrabold text-[#684531] font-allan"
       >
-        Watch the Tutorial !
+        Watching the Guideline
       </h1>
     </div>
     <div class="mx-[40px] my-[10px]">
-      <LiteYouTubeEmbed class="" id="9egKxXu499I" title="test" />
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/9VNM3DJElrw?cc_load_policy=1&cc_lang_pref=en"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+  
+      ></iframe>
     </div>
   </div>
 </template>
 <script>
-import LiteYouTubeEmbed from "vue-lite-youtube-embed"
-import "vue-lite-youtube-embed/dist/style.css"
-
 export default {
   name: "tutorial-component",
-  components: {
-    LiteYouTubeEmbed,
-  },
+  components: {},
 }
 </script>
